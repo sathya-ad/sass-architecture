@@ -1,0 +1,495 @@
+.card-innerview {
+    width: 842px;
+    margin: 0 auto 50px;
+
+    .breadcrumb {
+        .app-back {
+            background: url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/arrow.svg) no-repeat left;
+            opacity: .5;
+            font-size: 14px;
+            padding-left: 20px;
+            transition: .2s linear;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+
+    .innerview-head {
+        margin-top: 20px;
+
+        .innerview-details {
+            div {
+                display: inline-block;
+
+                &.creation-details {
+                    float: left;
+
+                    .creator-name,
+                    .creation-date {
+                        font-size: 13px;
+                        color: rgba(51, 51, 51, 0.5);
+
+                        a {
+                            color: #333333;
+                            opacity: .8;
+                            transition: .2s linear;
+
+                            &.hover {
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    &:after {
+                        content: "";
+                        clear: both;
+                        display: block;
+                    }
+                }
+            }
+
+            &:after {
+                content: "";
+                clear: both;
+                display: block;
+            }
+        }
+
+        .innerview-name {
+            position: relative;
+            margin: 10px 0 15px;
+
+            h2 {
+                font-size: 22px;
+                font-weight: 400;
+                color: #333;
+                padding-right: 60px;
+                line-height: 30px;
+                letter-spacing: .5px;
+                word-break: break-word;
+            }
+
+            .link-min {
+                @include position(absolute, 6px, 0, null, null);
+                font-size: 18px;
+                color: #333;
+                opacity: .7;
+            }
+        }
+
+        .innerview-process {
+            margin-bottom: 20px;
+
+            .challenge-button {
+                float: left;
+
+                .add-myq {
+                    color: #00ade4;
+                    font-size: 14px;
+                    cursor: pointer;
+                    opacity: .8;
+                    transition: .2s linear;
+                    background: url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/myq-blue.svg) no-repeat 0 3px;
+                    padding-left: 20px;
+
+                    &:hover {
+                        opacity: 1
+                    }
+
+                    &.active {
+                        background: url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/myq-blue-active.svg) no-repeat 0 3px;
+                    }
+                }
+
+                .challenge-done {
+                    font-size: 14px;
+                    color: #2bd205;
+                    padding-left: 20px;
+                    background: url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/tick-icon.svg) no-repeat 2px 4px;
+                }
+
+                .view-source {
+                    opacity: 0.5;
+                    font-size: 16px;
+                    color: #333333;
+                    cursor: pointer;
+                    transition: .2s linear;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+        }
+    }
+
+    .inner-steps {
+        margin: 30px 0;
+        padding-top: 30px;
+        border-top: 1px solid rgba(151, 151, 151, 0.20);
+
+        .link-step {
+            border-radius: 2px;
+            background-color: #ffffff;
+            border: 1px solid #EAEAEA;
+
+            a {
+                display: block;
+
+                img {
+                    width: 248px;
+                    height: 180px;
+                    float: left;
+                    object-fit: cover;
+                }
+
+                .embed-description {
+                    margin-left: 280px;
+                    padding: 30px 10px 20px 0;
+                    max-height: 180px;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                    position: relative;
+                    height: 180px;
+
+                    h1 {
+                        font-size: 14px;
+                        color: #333333;
+                        margin-bottom: 16px;
+                        font-weight: 500;
+                    }
+
+                    p {
+                        opacity: 0.5;
+                        font-size: 14px;
+                        color: #333333;
+                        line-height: 1.67;
+                        height: 50px;
+                        overflow: hidden;
+                    }
+
+                    span {
+                        color: #333333;
+                        opacity: .5;
+                        display: inline-block;
+                        bottom: 20px;
+                        position: absolute;
+                        font-size: 14px;
+                        font-weight: 300;
+                    }
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+            }
+            iframe {
+                width: 100%;
+            }
+            .error-placeholder {
+                display: none;
+            }
+            &.error {
+                position: relative;
+
+                .error-placeholder {
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    border-radius: 2px;
+                    background-color: #f9f9f9;
+                    text-align: center;
+                    padding: 68px;
+
+                    p {
+                        font-size: 14px;
+                        color: #df513e;
+                        margin-bottom: 12px;
+                    }
+                    span {
+                        opacity: 0.5;
+                        font-family: Lato;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .video-step {
+            height: 520px;
+            border: 1px solid #d6d6d6;
+
+            .video-wrapper {
+                position: relative;
+
+                figure {
+                    position: relative;
+
+                    img {
+                        height: 100%;
+                        border-bottom: 2px;
+                    }
+
+                    &:after {
+                        content: "";
+                        @include position(absolute, 0, null, null, 0);
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .video-button {
+                    width: 113px;
+                    height: 113px;
+                    @include position(absolute, calc(50% - 56px), null, null, calc(50% - 56px));
+                    border: 2px solid #FFFFFF;
+                    border-radius: 100%;
+                    background: rgba(0, 0, 0, 0.29) url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/play-icon.svg) no-repeat;
+                    background-size: 30px;
+                    background-position: 45px 38px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        au-takeaway-step h1 {
+            font-weight: 400;
+            margin-top: 40px;
+        }
+
+        .post-review {
+            margin: 25px 0;
+            border: 1px solid rgba(151, 151, 151, 0.2);
+            padding: 22px 15px 0 15px;
+            position: relative;
+            transition: .2s linear;
+
+            figure {
+                width: 36px;
+                height: 36px;
+                border-radius: 100%;
+                overflow: hidden;
+                float: left;
+                position: relative;
+                top: 0;
+                left: 14px;
+
+                 img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: cover;
+                 }
+             }
+             .review-input {
+                 margin-left: 65px;
+                 position: relative;
+
+                .text-editor.ql-container {
+                    height: auto;
+                }
+                .text-editor {
+                    textarea, .ql-editor {
+                        background: transparent;
+                        border: none;
+                        resize: none;
+                        width: 100%;
+                        outline: none;
+                        border-radius: 2px;
+                        opacity: 0.8;
+                        font-size: 14px;
+                        padding: 3px;
+                        line-height: 1.86;
+                        min-height: 100px;
+                        max-height: 500px;
+                        height: 100px;
+
+                        &:before {
+                            left: 3px;
+                            font-style: normal;
+                        }
+                    }
+
+                }
+                .review-edit {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 2px;
+                    border: solid 1px rgba(221, 221, 221, 0.5);
+                    background: #fff url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/edit-icon.svg) no-repeat center;
+                    position: absolute;
+                    top: -33px;
+                    right: -25px;
+                    cursor: pointer;
+                    transition: .1s linear;
+                    display: none;
+                }
+
+                .takeaways-post {
+                    float: right;
+                    font-weight: 300;
+                }
+
+                &:after {
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+            }
+
+            &.readonly {
+                background-color: rgba(244, 244, 244, 0.5);
+                border: 1px solid rgba(151, 151, 151, 0.2);
+                box-shadow: none;
+                padding: 22px 15px 15px 15px;
+
+                &:hover {
+                    .review-edit {
+                        display: block;
+                    }
+                }
+                .ql-editor {
+                    max-height: none !important;
+                }
+            }
+
+            .review-action {
+                display: none;
+                margin: 30px 0 20px;
+
+                button {
+                    margin-right: 22px;
+
+                    &.btn-cta {
+                        padding: 10px 18px;
+                    }
+
+                    &:not(.btn-cta) {
+                        font-size: 14px;
+                        opacity: .5;
+                        ;
+                    }
+                }
+            }
+            &:not(.readonly):focus-within {
+                border: 1px solid #00ADE4;
+                box-shadow: 0 0.5px 5px rgba(0, 168, 220, 0.2);
+            }
+        }
+    }
+
+
+    .complete-link {
+        margin-bottom: 30px;
+
+        .btn-cta.takeaways-post {
+            padding: 10px 16px;
+        }
+    }
+
+    .innerview-takeaways {
+        h1 {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333333;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(151, 151, 151, 0.2);
+        }
+
+        .review-list {
+            li {
+                padding: 25px 0;
+
+                a {
+                    float: left;
+
+                    .user-img {
+                        width: 36px;
+                        height: 36px;
+                        overflow: hidden;
+                        border-radius: 100%;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                .user-review {
+                    margin-left: 50px;
+                    
+                    h2 {
+                        margin-bottom: 10px;
+                        margin-top: 8px;
+                        height: 20px;
+                        display: inline-block;
+                    
+                        a {
+                            font-size: 16px;
+                            color: #333333;                             
+                            font-weight: 500;
+                        }
+                        
+                        &:after {
+                            content: "";
+                            clear: both;
+                            display: block;
+                        }
+                    }
+                    
+                    span.takeaway-date {
+                        float: right;
+                        opacity: 0.5;
+                        font-family: Lato;
+                        font-size: 14px;
+                        margin-top: 8px;
+                    }
+                    
+                    p {
+                        font-size: 14px;
+                        color: rgba(51, 51, 51, 0.7);
+                        line-height: 1.86;
+                    }
+                }
+            }
+        }
+        au-takeaways.loader {
+            .dot-loader {
+                display: block;
+                text-align: center;
+                padding: 5px 0 10px;
+                margin: 50px 0;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 860px) {
+    .card-innerview {
+        width: 100%;
+
+        .inner-steps .link-step a {
+            img {
+                display: none;
+            }
+            .embed-description {
+                margin-left: 0 !important;
+                padding: 30px 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+section.au {
+    background-color: $whiteColor;
+
+    .main-body {
+        margin-top: 78px;
+        transition: .2s ease-in-out;
+
+        main.main-container {
+            max-width: 1025px;
+            margin: 0 auto;
+            padding-top: 35px;
+            position: relative;
+            min-height: 450px;
+        }
+    }
+}

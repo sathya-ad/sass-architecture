@@ -1,0 +1,158 @@
+.people-content {
+    .content-head {
+
+        .people-tab {
+            padding-bottom: 10px;
+
+            > a {
+                font-size: 18px;
+                border-bottom: 0;
+
+                &:after {
+                    background: none;
+                }
+
+            }
+            .people-filter {
+                float: right;
+
+                cite {
+                    opacity: 0.55;
+                    font-style: normal;
+                    margin-right: 10px;
+                    font-size: 14px;
+                }
+                span.dropdown-select.learning-val {
+                    text-transform: capitalize;
+                }
+            }
+            .invite-people {
+                float: right;
+                margin-right: 25px;
+
+                .btn-cta {
+                    border: 1px solid #00ADE4;
+                    background: transparent;
+                    color: #00ADE4;
+                    margin: 0 0 0 30px;
+                    position: relative;
+                    top: -9px;
+                }
+            }
+        }
+
+        .peoplelist-head {
+            padding: 0 0px 20px;
+            border-bottom: 1px solid rgba(151, 151, 151, 0.2);
+
+            span {
+                float: left;
+                opacity: 0.5;
+                font-size: 14px;
+
+                &:last-child {
+                    float: right;
+                }
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+        }
+    }
+}
+.people-list {
+    .people-card {
+        padding: 20px 0;
+        border-bottom: 1px solid #eaeaea;
+
+        .people-details {
+            float: left;
+            width: 90%;
+
+            figure {
+                width: 64px;
+                height: 64px;
+                float: left;
+                border: solid 1px #e8e8e8;
+                overflow: hidden;
+                margin-right: 16px;
+                border-radius: 100%;
+
+                a {
+                    display: inline-block;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            figcaption {
+                margin-left: 80px;
+                padding: 10px 0;
+
+                h3 {
+                    font-size: 16px;
+                    font-weight: 500;
+                    margin-bottom: 8px;
+                }
+                span {
+                    opacity: 0.55;
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .people-stats {
+            float: left;
+            width: 10%;
+            text-align: right;
+            padding: 22px 0px 22px 0;
+
+            span {
+                font-size: 16px;
+                font-weight: 500;
+                display: block;
+            }
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        &:last-child {
+            border: none;
+        }
+    }
+}
+
+
+// for responsive
+
+@media (max-width: 1080px) {
+    .people-content .content-head .people-tab .invite-people {
+        display: none;
+    }
+}
+
+@media (max-width: 760px) {
+    .people-list .people-card {
+        .people-details {
+            width: 75%;
+
+            figcaption {
+                overflow: hidden;
+                margin-right: 20px;
+            }
+        }
+        .people-stats {
+            width: 25%;
+        }
+    }
+}

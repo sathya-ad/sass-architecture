@@ -1,0 +1,21 @@
+.tag-content {
+    .content-head {
+        h2 {
+            font-size: 20px;
+            display: inline-block;
+
+            cite {
+                font-style: normal;
+                color: rgba(14, 14, 14, 0.5);
+                font-weight: 400;
+                margin-right: 10px;
+            }
+            span {
+                font-weight: 400;
+            }
+        }
+        .tag-dropdown {
+            float: right;
+        }
+    }
+}

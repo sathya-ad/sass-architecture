@@ -1,0 +1,51 @@
+.input-value{
+    width: 100%;
+    border: solid 1px #dcdcdc;
+    padding: 9px 12px;
+    margin-bottom: 20px;
+
+    li {
+        border-radius: 2px;
+        font-size: 13px;
+        font-weight: 400;
+        float: left;
+        margin-right: 8px;
+        margin-bottom: 10px;
+        position: relative;
+
+        span {
+            opacity: 1;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        input {
+            padding: 7px;
+            border: 0;
+            border-radius: 0;
+            box-shadow: none;
+            font-size: 13px;
+            padding-left: 2px;
+            border: 1px solid transparent;
+
+        }
+        &:not(.input-list) {
+            background-color: #effafd;
+            padding: 8px 30px 8px 8px;
+        }
+        .close {
+            right: 5px;
+            top: 7px;
+        }
+        &.input-list {
+            margin-bottom: 0;
+        }
+        .error {
+            border: 1px solid #EE7666;
+        }
+    }
+    &:after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+}

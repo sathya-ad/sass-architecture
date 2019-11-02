@@ -1,0 +1,270 @@
+.recommend-content {
+    position: relative;
+
+    > h2 {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 600;
+        -webkit-animation: headingAnimation 0.20s ease-in-out 0.20s both;
+        animation: headingAnimation 0.20s ease-in-out 0.20s both;
+
+        &:after {
+            content: "_";
+            position: relative;
+            left: 10px;
+            top: -6px;
+            color: #979797;
+            display: none;
+        }
+    }
+    p {
+        font-size: 12px;
+        margin-top: 5px;
+        -webkit-animation: headingAnimation 0.25s ease-in-out 0.25s both;
+        animation: headingAnimation 0.25s ease-in-out 0.25s both;
+    }
+
+    .dropdown {
+        >span {
+            color: #06AEE5;
+        }
+    }
+
+    .field-input {
+        margin: 18px 0 15px;
+        -webkit-animation: headingAnimation 0.28s ease-in-out 0.28s both;
+        animation: headingAnimation 0.28s ease-in-out 0.28s both;
+        position: relative;
+
+        input.recommend-link {
+            width: 100%;
+        }
+        &.no-border {
+            margin: 0;
+            background: transparent;
+        }
+    }   
+
+    .recommend-details {
+        background: #F8F8F8;
+        padding: 20px 22px;
+        border-radius: 2px;
+        position: relative;
+        display: none;
+
+        figure {
+            float: left;
+            width: 70px;
+            height: 55px;
+            margin-right: 15px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        figcaption {
+            margin-left: 85px;
+
+            > div {
+                float: left;
+                width: 85%;
+                position: relative;
+
+                label {
+                    display: block;
+                    opacity: 0.55;
+                    font-size: 13px;
+                }
+
+                .field-input {
+                    margin-top: 10px;
+
+                    input {
+                        display: inline-block;
+                        line-height: 28px;
+                        border: none;
+                        background-color: #f8f8f8;
+                        width: 100%;
+                        border: none;
+                        padding: 0;
+                        box-shadow: none;
+                        border-radius: 0;
+
+                        &:hover {
+                            border-color: rgba(51, 51, 51, 0.2);
+                        }
+
+                        &:focus {
+                            box-shadow: none;
+                        }
+                    }
+                }
+                &.link-title > .field-input {
+                    width: 95%;
+                }
+            }
+
+            > div.link-min {
+                float: left;
+                width: 15%;
+            }
+
+            &:after {
+                content: "";
+                clear: both;
+                display: block;
+            }
+        }
+
+        span.more-settings {
+            display: inline-block;
+            width: 25px;
+            height: 12px;
+            background: url('https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/more-icon.svg') no-repeat 0 0;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .link-setting {
+            margin-top: 20px;
+            display: none;
+
+            h4 {
+                opacity: 0.5;
+                font-size: 13px;
+                font-weight: 400;
+                margin: 10px 0;
+            }
+
+            .ch-tags {
+                min-height: 30px;
+                
+                .tag-input {
+                    position: relative;
+                    top: 6px;
+
+                    input {
+                        box-shadow: none;
+                        border-radius: 0;
+                        background: #f8f8f8;
+                        border: none;
+                    }
+                    .text-countdown {
+                        right: 0;
+                    }
+                }
+            }
+
+            .content-type {
+                li {
+                    display: inline-block;
+                    margin: 0 14px 14px 0;
+                    font-size: 14px;
+                    cursor: pointer;
+                    position: relative;
+                    padding-left: 20px;
+
+                    .radio-button {
+                        position: absolute;
+                        top: 4px;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .duplicate-message {
+        display: none;
+        font-size: 12px;
+        background: url('https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/duplicate-icon.svg') no-repeat left;
+        padding-left: 20px;
+        margin-top: 14px;
+
+        a {
+            color: #1DB2E3;
+            text-decoration: underline;
+        }
+    }
+
+    .recommend-footer {
+        border-top: 1px solid rgba(151, 151, 151, 0.2);
+        margin-top: 20px;
+        padding-top: 20px;
+        text-align: right;
+        display: none;
+
+        button {
+            padding: 8px 13px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            font-weight: 300;
+        }
+    }
+
+    &.loader {
+        .populate-loader {
+            position: absolute;
+            top: 17px;
+            right: 10px;
+            left: initial;
+            display: inline-block !important;
+            background-color: #1DB2E3;
+            z-index: 4;
+        }
+
+        .recommend-link {
+            padding-right: 40px;
+        }
+    }
+
+    &.populate {
+
+        .recommend-details,
+        .recommend-footer {
+            display: block;
+        }
+    }
+
+    &.duplicate {
+        .recommend-details {
+            background: #FFFDF8;
+            border: 1px solid #FFAE17;
+
+            +.duplicate-message {
+                display: inline-block;
+            }
+        }
+    }
+
+    &.expand {
+
+        .more-settings {
+            display: none !important;
+        }
+
+        .link-setting {
+            display: block;
+            line-height: normal;
+        }
+    }
+}
+
+
+
+@media (max-width: 680px) {
+    section.recommend-popup {
+        padding: 10px;
+
+        .container {
+            width: 90%;
+            position: initial;
+            margin: 10% auto;
+        }
+    }
+}

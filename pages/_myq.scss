@@ -1,0 +1,59 @@
+.myq-content .content-head {
+    .user-details {
+        margin-bottom: 30px;
+
+        .user-img {
+            width: 90px;
+            height: 90px;
+            float: left;
+            margin-right: 30px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 100%;
+            }
+        }
+        h2 {
+            line-height: 90px;
+            margin-left: 120px;
+            font-size: 30px;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+        &:after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+    }
+    .dropdown .dropdown-select {
+        font-size: 18px;
+    }
+    
+    &:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+}
+.myq-content.learning .myq-tab a.learning {
+    opacity: 1;
+    border-color: $mainColor;
+}
+.myq-content.queue .myq-tab a.queue {
+    opacity: 1;
+    border-color: $mainColor;
+}
+.myq-content.reports .myq-tab a.reports {
+    opacity: 1;
+    border-color: $mainColor;
+}
+au-myq[content=queue] .learning-dropdown, au-myq[content=recommended] .learning-dropdown {
+    display: none;
+}
+au-myq[ismyq=false] .myq-content .content-head .myq-tab .queue {
+
+    display: none;
+}
+

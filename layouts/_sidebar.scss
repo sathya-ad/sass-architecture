@@ -1,0 +1,114 @@
+au-sidebar aside {
+    @include position(fixed, 78px, null, null, null);
+    z-index: -1;
+    transition: .05s linear;
+    
+    .main-sidebar {
+        width: 200px;
+        height: 100vh;
+        background-color: $whiteColor;
+        border-right: 1px solid rgba(151, 151, 151, 0.2);
+        position: relative;
+        left: -200px;
+        transition: .2s ease-in-out;
+
+        nav.main-nav {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(151, 151, 151, 0.2);
+
+            a {
+                display: block;
+                padding: 5px 30px 5px 65px;
+                margin: 19px 0 20px;
+                position: relative;
+                font-size: 14px;
+                font-weight: 500;
+                opacity: .8;
+                border-left: 3px solid transparent;
+                @include transition(.2s linear);
+
+                i {
+                    width: 20px;
+                    height: 21px;
+                    position: absolute;
+                    left: 25px;
+                    margin-right: 20px;
+                    @include opacity(0.5);
+                    @include transition(.2s linear);
+                }
+
+                span {
+                    display: inline-block;
+                    line-height: 21px;
+                }
+
+                &.home-btn i {
+                    background: url('https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/home-icon.svg') no-repeat center;
+                }
+
+                &.myq-btn i {
+                    background: url('https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/myq-page-active.svg') no-repeat center;
+                }
+
+                &.people-btn i {
+                    background: url('https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/people-icon.svg') no-repeat center;
+                }
+
+                &.course-btn i {
+                    background: url('https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/course-icon.svg') no-repeat center;
+                }
+
+                &:hover,
+                &.active {
+                    border-color: $mainColor;
+                    opacity: 1;
+
+                    i {
+                        @include opacity(1);
+                    }
+                }
+            }
+        }
+
+        >h4 {
+            @include opacity(0.5);
+            @include margin(all, 25px 35px 23px 30px);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .track-list {
+            a {
+                display: flex;
+                padding: 12px 27px;
+                border-left: 3px solid transparent;
+                @include transition(.2s linear);
+
+                img {
+                    width: 25px;
+                    height: 25px;
+                    @include border-radius(100%);
+                }
+
+                span {
+                    display: inline-block;
+                    line-height: 25px;
+                    margin-left: 12px;
+                    font-size: 14px;
+                }
+
+                &:hover,
+                &.active {
+                    border-color: $mainColor;
+
+                    i {
+                        @include opacity(1);
+                    }
+                }
+            }
+        }
+    }
+}
+.au.sidebar-open au-sidebar aside {
+    z-index: 1;
+}

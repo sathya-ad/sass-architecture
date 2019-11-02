@@ -1,0 +1,241 @@
+.main-container {
+    max-width: 1065px;
+    margin: 0 auto;
+
+    .dropdown {
+        .dropdown-select {
+            font-size: 16px;
+            letter-spacing: 0.6px;
+        }
+
+        &.category-dropdown {
+            .dropdown-select {
+                background: none;
+                font-size: 18px;
+                display: none;
+            }
+        }
+        &.filter-dropdown {
+            position: relative;
+            top: 2px;
+            
+            .dropdown-select {
+                font-size: 14px;
+                background: url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/arrow-down.svg) no-repeat right 8px;
+            }
+        }
+    }
+
+    ul.challenge-list {
+        li {
+            display: inline-block;
+            max-width: 245px;
+            max-height: 310px;
+            width: 245px;
+            background: #FFFFFF;
+            @include margin(all, 0 15px 20px 0);
+            @include border-radius(4px);
+            @include transition(.4s ease);
+            border: 1px solid rgba(51, 51, 51, 0.1);
+            position: relative;
+            overflow: hidden;
+
+            figure {
+                width: 100%;
+                height: 190px;
+                position: relative;
+                overflow: hidden;
+
+                a.challenge-image {
+                    display: inline-block;
+                    position: relative;
+
+                    width: 100%;
+        
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: .2s linear;
+                        border-top-left-radius: 4px;
+                        border-top-right-radius: 4px;
+                    }
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        border-top-left-radius: 4px;
+                        border-top-right-radius: 4px;
+                    }
+                }
+
+                .challenge-type {
+                    display: inline-block;
+                    width: 25px;
+                    height: 25px;
+                    @include position(absolute, null, null, 10px, 14px);
+                    border-radius: 100%;
+                    background-size: 9px !important;
+                    cursor: pointer;
+
+                    &.video {
+                        background: url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/play-icon.svg) no-repeat rgba(0, 0, 0, 0.6) 9px center;
+                    }
+
+                    &.audio {
+                        background: url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/audio-icon.svg) no-repeat rgba(0, 0, 0, 0.6) center;
+                    }
+
+                    &.article {
+                        background: url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/article-icon.svg) no-repeat rgba(0, 0, 0, 0.6) center;
+                    }
+
+                    &.book {
+                        background: url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/book-icon.svg) no-repeat rgba(0, 0, 0, 0.6) center 8px;
+                        background-size: 12px !important;
+                    }
+                }
+
+                .challenge-minutes {
+                    @include position(absolute, null, 14px, 10px, null);
+                    color: #FFFFFF;
+                    text-align: center;
+                    padding: 5px 12px;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    border-radius: 25px;
+                    opacity: .9;
+                    font-weight: 300;
+                    font-size: 12px;
+                    min-width: 46px;
+                    cursor: pointer;
+                }
+
+                .card-dropdown {
+                    @include position(absolute, 10px, 10px, null, null);
+                    margin: 0;
+                    display: none;
+
+                    .dropdown-select {
+                        width: 16px;
+                        height: 16px;
+                        opacity: 0.55;
+                        border-radius: 2px;
+                        background: #000000 url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/menu-icon.svg) no-repeat center;
+                    }
+
+                    &.open {
+                        .dropdown-menu {
+                            width: 130px;
+                            top: 20px;
+                            right: 0;
+
+                            a {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            figcaption {
+                @include padding(all, 14px 14px 20px 14px);
+
+                >a {
+                    height: 45px;
+                    overflow: hidden;
+                    display: inline-block;
+
+                    > span.name {
+                        color: $fontColor;
+                        line-height: 22px;
+                        font-size: 13px;
+                        display: block;
+                        word-break: break-word;
+                    }
+                }
+
+                .challenge-options {
+                    @include margin(top, 20px);
+                    height: 15px;
+                    position: relative;
+
+                    span.challenge-source {
+                        @include opacity(0.5);
+                        font-size: 12px;
+                        font-weight: 300;
+                        text-transform: capitalize;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        width: 90%;
+                        height: 15px;
+                        display: inline-block;
+                    }
+
+                    span.add-myq {
+                        width: 15px;
+                        height: 15px;
+                        @include position(absolute, 0, 0, null, null);
+                        cursor: pointer;
+                        outline: none;
+                        background: url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/myq-icon.svg) no-repeat center 0px;
+
+                        &.active {
+                            background: url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/myq-active.svg) no-repeat center 0px;
+                            animation: .8s heartBeat;
+                        }
+                    }
+
+                    :after {
+                        content: "";
+                        display: block;
+                        clear: both;
+                    }
+                }
+            } 
+
+            &:hover {
+                @include box-shadow(0 3px 28px 0 rgba(0, 0, 0, 0.2));
+
+                .card-dropdown {
+                    display: block;
+                }
+                // figure a.challenge-image img {
+                //     transform: scale(1.03);
+                // }
+            }
+        }
+
+        >au-card:nth-child(4n) .challenge-card {
+            @include margin(right, 0);
+        }
+    }
+}
+
+
+// mediaquery for home page
+
+@media (max-width: 1040px) {
+    au-home, au-myq {
+        .home-content {
+            margin: 0 30px 30px;
+        }
+
+        ul.challenge-list {
+            max-width: 520px;
+            margin: 0 auto;
+        }
+    }
+    .au.sidebar-open .main-body {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    au-home, au-myq {
+        ul.challenge-list {
+            max-width: 250px;
+        }
+    }
+}

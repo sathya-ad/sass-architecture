@@ -1,0 +1,148 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+    > span.dropdown-select {
+        padding: 0 15px 0 0px;
+        display: inline-block;
+        transition: .2s linear;
+        text-transform: capitalize;
+        background: url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/arrow-down.svg) no-repeat right 10px;
+    }
+    .dropdown-menu {
+        background: #FFFFFF;
+        border: 1px solid #F8F5F5;
+        box-shadow: 0 2px 4px 0 rgba(192, 192, 192, 0.5);
+        width: 190px;
+        max-height: 0;
+        position: absolute;
+        overflow: hidden;
+        top: -10px;
+        right: 0;
+        z-index: -1;
+        transition: .2s linear;
+        opacity: 0;
+
+         &:before, &:after {
+            content: '';
+            display: inline-block;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #ccc;
+            border-bottom-color: rgba(0,0,0,0.2);
+            @include position(absolute, -10px, 9px, null, null);
+            position: absolute;
+            right: 9px;
+        }
+        &:after {
+            border-left: 9px solid transparent;
+            border-right: 9px solid transparent;
+            border-bottom: 9px solid #f3f3f3;
+            top: -8px;
+            right: 10px;
+        }   
+        > nav, ul {
+            max-height: 470px;
+            overflow: auto;
+
+             > a, > li {
+                display: block;
+                padding: 10px 12px;
+                font-size: 14px;
+                transition: .2s ease;
+                -webkit-transform: translateY(-20px);
+                transform: translateY(-20px);
+                opacity: 0;
+
+                 &:hover, &.active {
+                    background:rgba(238,238,238,0.50);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &.open { 
+        .dropdown-select {
+            transform: translate3d(0, 5px, 0);
+            opacity: .2;
+        }
+        .dropdown-menu {
+            z-index: 100;
+            max-height: 470px;
+            opacity: 1;
+            padding: 10px 0;
+
+            > nav, ul {
+                 > a, > li {
+                    -webkit-transform: translateY(0);
+                    transform: translateY(0);
+                    opacity: 1;
+
+                    &:nth-child(1) {
+                        transition-delay: 60ms;
+                    }
+                    &:nth-child(2) {
+                        transition-delay: 90ms;
+                    }
+                    &:nth-child(3) {
+                        transition-delay: 120ms;
+                    }
+                    &:nth-child(4) {
+                        transition-delay: 150ms;
+                    }
+                    &:nth-child(5) {
+                        transition-delay: 180ms;
+                    }
+                    &:nth-child(6) {
+                        transition-delay: 210ms;
+                    }
+                    &:nth-child(7) {
+                        transition-delay: 240ms;
+                    }
+                    &:nth-child(8) {
+                        transition-delay: 270ms;
+                    }
+                    &:nth-child(9) {
+                        transition-delay: 300ms;
+                    }
+                    &:nth-child(10) {
+                        transition-delay: 330ms;
+                    }
+                }
+            }
+        }
+    }
+    &.filter-dropdown {
+        float: right;
+        
+        .dropdown-menu {
+            right: 0;
+        }
+    }
+    .tag-dropdown .dropdown-menu {
+        width: 100%;
+        top: initial;
+        padding: 3px 0;
+        max-height: 150px;
+        overflow: auto;
+
+        nav a.dropdown-list {
+            padding: 5px;
+            font-size: 12px;
+        }
+    }
+    &.search-dropdown{
+        float: right;
+    }
+    &.au-search.open {
+        .dropdown-menu.search-list {
+            z-index: 100;
+            height: auto !important;
+            width: 94% !important;
+            max-height: 470px !important;
+            opacity: 1;
+            padding: 10px 0;
+        }
+    }
+}

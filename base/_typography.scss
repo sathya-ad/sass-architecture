@@ -1,0 +1,42 @@
+$fontPath : "../../../fonts/lato/lato-woff";
+
+
+/* Webfont: Lato-Light */
+@font-face {
+    font-family: 'Lato';
+    src: url('#{$fontPath}/Lato-Light.woff') format('woff'); /* Modern Browsers */
+    font-style: normal;
+    font-weight: 200;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Regular */
+@font-face {
+    font-family: 'Lato';
+    src: url('#{$fontPath}/Lato-Regular.woff') format('woff'); /* Modern Browsers */
+    font-style: normal;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Medium */
+@font-face {
+    font-family: 'Lato';
+    src: url('#{$fontPath}/Lato-Medium.woff') format('woff'); /* Modern Browsers */
+    font-style: normal;
+    font-weight: 500;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Semibold */
+@font-face {
+    font-family: 'Lato';
+    src: url('#{$fontPath}/Lato-Semibold.woff') format('woff'); /* Modern Browsers */
+    font-style: normal;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+

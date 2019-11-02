@@ -1,0 +1,32 @@
+.empty-states {
+    display: none;
+    text-align: center;
+    margin: 25% auto 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+
+    h2 {
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: 0.8px;
+        text-align: center;
+        margin: 20px 0 10px;
+    }
+    span {
+        font-size: 14px;
+        font-weight: 300;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+.empty-with-button .empty-states {
+    display: block;
+}
+.empty-without-button .empty-states {
+    display: block;
+    
+    button {
+        display: none;
+    }
+}

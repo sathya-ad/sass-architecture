@@ -1,0 +1,174 @@
+// for content loader
+
+
+.populate-loader {
+    display: none;
+    background: #1DB2E3;
+    position: relative;
+    -webkit-animation: populate-loader 1s ease-in-out infinite;
+            animation: populate-loader 1s ease-in-out infinite;
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+    width: .25em !important;
+    height: .5em !important;
+    margin: 0 .5em;
+
+    &:after, &:before {
+        content: '';
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background: inherit;
+        -webkit-animation: inherit;
+                animation: inherit;
+    }
+    &:before {
+        right: .5em;
+        -webkit-animation-delay: 0.2s;
+                animation-delay: 0.2s;
+    }
+    &:after {
+        left: .5em;
+        -webkit-animation-delay: 0.6s;
+                animation-delay: 0.6s;
+    }
+}
+
+
+
+// for page loader
+
+.dot-loader {
+    display: none;
+    text-align: center;
+
+    > span {
+        display: inline-block;
+        width: 150px;
+        height: 20px;
+        background: url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/loader-gif.gif) no-repeat center;
+        background-size: 150px;
+    }
+}
+
+.loader .dot-loader {
+    display: block;
+}
+
+.main-container {
+    .dot-loader {
+        display: none;
+
+        > span {
+            display: inline-block;
+            width: 150px;
+            height: 20px;
+            background: url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/loader-gif.gif) no-repeat center;
+            background-size: 150px;
+        }
+    }
+    &.page-loader {
+        .dot-loader {
+            display: block;
+            text-align: center;
+            position: relative;
+            top: 100px;
+        }
+    }
+    .component.card-loader {
+        .dot-loader {
+            display: block;
+            text-align: center;
+            padding: 5px 0 10px;
+        }
+    }
+    .component.loader {
+        .dot-loader {
+            display: block;
+            text-align: center;
+            padding: 5px 0 10px;
+            margin: 50px 0;
+        }
+    }
+}
+
+
+
+// for bg transition loader
+
+.content-loader {
+    // -webkit-animation-duration: 1s;
+    // animation-duration: 1s;
+    // -webkit-animation-fill-mode: forwards;
+    // animation-fill-mode: forwards;
+    // -webkit-animation-iteration-count: infinite;
+    // animation-iteration-count: infinite;
+    // -webkit-animation-name: content-loader;
+    // animation-name: content-loader;
+    // -webkit-animation-timing-function: linear;
+    // animation-timing-function: linear;
+    // background: -webkit-gradient(linear, left top, right top, color-stop(8%, #eeeeee), color-stop(18%, #d8d8d8), color-stop(33%, #eeeeee));
+    // background: -webkit-linear-gradient(left, #eeeeee 8%, #d8d8d8 18%, #eeeeee 33%);
+    // background: linear-gradient(to right, #eeeeee 8%, #d8d8d8 18%, #eeeeee 33%);
+    // background-size: 0;
+    background-image: linear-gradient(to left, rgba(238, 238, 238, 0.6), rgba(216, 216, 216, 0.7));
+    position: relative;
+}
+.card-innerview.loader {
+    -webkit-background-size: 1000px 104px;
+    background-size: 1000px 104px;
+
+    h2:empty, .innerview-process, .innerview-details {
+        @extend .content-loader;
+        height: 15px;
+        margin: 20px 0;
+        width: 60%;
+        -webkit-background-size: 1000px 104px;
+        background-size: 1000px 104px;
+    }
+    .inner-progress, .challenge-button, .link-min, .innerview-details div.creation-details {
+        display: none;
+    }
+    .innerview-process, .innerview-details {
+        width: 220px;
+    }
+}
+
+.link-step.loader {
+    @extend .content-loader;
+    -webkit-background-size: 1000px 104px;
+    background-size: 1000px 104px;
+    height: 180px;
+
+    * {
+        display: none;
+    }
+}
+
+
+// for myq loader
+
+.add-myq.loader {
+    position: relative;
+    background: none !important;
+
+    &:before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border: 2px solid #00ade4;
+        border-radius: 100%;
+        background: transparent;
+        position: absolute;
+        left: 0;
+        top: 0;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+        border-top: 2px solid transparent;
+        -webkit-animation: load-animate infinite linear 1s;
+        animation: load-animate infinite linear 1s;
+    }
+}
+.card-innerview .challenge-button .add-myq:before {
+    left: -2px;
+    top: 2px;
+}

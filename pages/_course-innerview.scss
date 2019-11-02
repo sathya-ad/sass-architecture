@@ -1,0 +1,100 @@
+.course-innerview {
+    aside.course-sidebar {
+        width: 340px;
+        height: calc(100% - 110px);
+        border-right: 1px solid rgba(216, 216, 216, 0.5);
+
+        .innerview-head {
+            margin-top: 20px;
+            padding: 30px;
+            border-bottom: 1px solid rgba(216, 216, 216, 0.5);
+
+            .innerview-details {
+                div {
+                    display: inline-block;
+
+                    .creator-name,
+                    .creation-date {
+                        font-size: 13px;
+                        color: rgba(51, 51, 51, 0.5);
+
+                        a {
+                            color: #333333;
+                            opacity: .8;
+                            transition: .2s linear;
+
+                            &.hover {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .innerview-name {
+                position: relative;
+                margin: 10px 0 15px;
+
+                h2 {
+                    font-size: 22px;
+                    font-weight: 400;
+                    color: #333;
+                    padding-right: 60px;
+                    line-height: 30px;
+                    letter-spacing: .5px;
+                }
+
+                .link-min {
+                    @include position(absolute, 6px, 0, null, null);
+                    font-size: 18px;
+                    color: #333;
+                    opacity: .7;
+                }
+            }
+
+            .innerview-process {
+                margin-bottom: 20px;
+
+                .challenge-button {
+                    float: left;
+
+                    .add-myq {
+                        color: #00ade4;
+                        font-size: 14px;
+                        cursor: pointer;
+                        opacity: .8;
+                        transition: .2s linear;
+                        background: url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/myq-icon-blue.svg) no-repeat 0 3px;
+                        padding-left: 20px;
+
+                        &:hover {
+                            opacity: 1
+                        }
+
+                        &.active {
+                            background: url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/myq-active.svg) no-repeat 0 3px;
+                        }
+                    }
+
+                    .challenge-done {
+                        font-size: 14px;
+                        color: #2bd205;
+                        padding-left: 20px;
+                        background: url(https://storage.googleapis.com/adaptiveyou/adaptiveu-v2/icons/tick-icon.svg) no-repeat 2px 4px;
+                    }
+                }
+
+                &:after {
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+            }
+        }
+    }
+    &:after {
+        content:"";
+        clear: both;
+        display: block;
+    }
+}
